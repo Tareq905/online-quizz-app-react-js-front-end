@@ -8,7 +8,9 @@ const Form = () => {
         onSubmit={handleSubmit}
         className="bg-white p-5 md:p-8 max-w-[500px] space-y-8 shadow rounded-lg w-11/12 "
       >
-        <h2 className="text-3xl font-medium">Setup Quiz</h2>
+        <h1 className="text-3xl font-medium">Ikaros - The Quiz App</h1>
+        
+        <h2 className="text-3xl font-medium">Setup here</h2>
         <div className="flex flex-col space-y-2">
           <label className="text-gray-600 font-medium" htmlFor="amount">
             Number of Questions
@@ -36,10 +38,10 @@ const Form = () => {
             onChange={handleChange}
            
           >
-            <option value="sports">sports</option>
-            <option value="politics">politics</option>
             <option value="history">history</option>
+            <option value="sports">sports</option>
             <option value="science">science</option>
+            
           </select>
         </div>
         <div className="flex flex-col space-y-2">
@@ -72,18 +74,19 @@ const Form = () => {
            
           >
             <option value="multiple">multiple choice</option>
-            <option value="boolean">true or false</option>
+            <option value="boolean">true/false</option>
+            
            
           </select>
         </div>
         {error && (
           <p className="text-red-600">
-            Can't Generate Questions, Please Try Different Options
+            Can't Generate Questions in this type, Please Try Different type.
           </p>
         )}
         <button
           type="submit"
-          className="bg-yellow-600 rounde-md w-full p-2 text-white hover:bg-yellow-500"
+          className="bg-sky-500 rounde-md w-full p-2 text-white hover:bg-fuchsia-600"
         >
           Start
         </button>
